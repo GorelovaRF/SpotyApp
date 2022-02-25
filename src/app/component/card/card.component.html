@@ -1,0 +1,12 @@
+
+<div class="card puntero m-1" >
+    <img alt="card.name" [src]="card.images | sinfoto" class="card-img-top" routerLink="album/{{card.id}}">
+    <div class="card-body">
+        <h5 class="card-title" routerLink="album/{{card.id}}">{{card.name}}</h5>
+        <p class="card-text">
+            <span *ngFor="let a of card.artists" class="badge" routerLink="artist/{{a.id}}">
+                {{a.name}}
+            </span> 
+        </p>
+    </div>
+</div>
